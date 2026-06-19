@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Déblocage Business — LEGAL CORTEX | Dirigeants & PME</title><meta name="description" content="On débloque ce qui retarde vos signatures, paiements et décisions. Intervention courte, effet visible. À partir de 5 000 € HT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --paper:#F4F3EF; --paper-2:#ECEAE3;
+  --ink:#0D1420; --ink-2:#161F2E;
+  --amber:#FF9E1B; --amber-deep:#D9720A;
+  --muted:#586173; --muted-ink:#8E9AAB;
+  --line:#DCD9D0; --line-ink:rgba(255,255,255,.13);
+  --maxw:1180px;
+  --display:'Space Grotesk',sans-serif;
+  --body:'IBM Plex Sans',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--amber-deep)}
+.eyebrow.on-ink{color:var(--amber)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.0;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,3.1rem)}
+h3{font-size:1.12rem;letter-spacing:-.01em;line-height:1.2}
+p{color:var(--muted)}
+.mark{background:linear-gradient(transparent 56%,rgba(255,158,27,.55) 56%);padding:0 .04em}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.03em;padding:16px 26px;border-radius:2px;cursor:pointer;border:1.5px solid transparent;transition:transform .15s,background .2s,color .2s,box-shadow .2s}
+.btn-primary{background:var(--amber);color:var(--ink)}
+.btn-primary:hover{background:#ffad3d;transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(255,158,27,.75)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-ghost.on-ink{color:var(--paper);border-color:rgba(255,255,255,.45)}
+.btn-ghost.on-ink:hover{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(244,243,239,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--display);font-weight:700;font-size:1.16rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:9px}
+.logo .dot{width:7px;height:7px;background:var(--amber);border-radius:50%;display:inline-block;transform:translateY(-2px)}
+.logo small{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a.lnk{font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;opacity:.65;transition:opacity .2s}
+.nav a.lnk:hover{opacity:1}
+.hdr .btn{padding:11px 18px}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:22px;height:2px;background:var(--ink);display:block}
+
+/* hero */
+.hero{padding:96px 0 68px}
+.hero .eyebrow{display:block;margin-bottom:26px}
+.hero h1{font-size:clamp(2.6rem,7.2vw,5.1rem);max-width:15ch;margin-bottom:30px;line-height:.98}
+.hero .sub{font-size:clamp(1.15rem,1.9vw,1.5rem);color:var(--ink);font-weight:400;max-width:46ch;margin-bottom:38px;line-height:1.4}
+.hero .sub b{font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+.micro{font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.micro b{color:var(--ink);font-weight:600}
+.micro .sep{width:4px;height:4px;background:var(--amber);border-radius:50%;flex:none}
+
+/* picker (doors) */
+.picker{margin-top:54px;border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
+.picker .pk-lab{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.pk{font-family:var(--display);font-weight:600;font-size:1.08rem;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+.pk span{font-family:var(--mono);color:var(--amber-deep);transition:transform .2s}
+.pk:hover{border-color:var(--amber)}.pk:hover span{transform:translateX(4px)}
+
+/* proof strip */
+.proof{background:var(--ink)}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;align-items:center;padding:22px 30px;font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:var(--muted-ink)}
+.proof b{color:var(--paper);font-weight:600}
+.proof .sep{width:5px;height:5px;background:var(--amber);border-radius:50%}
+
+/* section scaffold */
+.sec{padding:104px 0}
+.sec-head{max-width:60ch;margin-bottom:54px}
+.sec-head .eyebrow{display:block;margin-bottom:18px}
+.sec-head h2{max-width:18ch}
+
+/* offers — editorial, borderless */
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.offer{padding:6px 0}
+.offer.left{padding-right:58px;border-right:1px solid var(--line)}
+.offer.right{padding-left:58px}
+.offer .target{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.offer .pain{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,2.4vw,1.95rem);line-height:1.08;letter-spacing:-.02em;color:var(--ink);margin-bottom:28px}
+.wins{list-style:none;margin-bottom:34px}
+.wins li{position:relative;padding-left:28px;margin-bottom:15px;font-size:1.1rem;color:var(--ink);line-height:1.35}
+.wins li::before{content:"→";position:absolute;left:0;top:0;font-family:var(--mono);font-weight:600;color:var(--amber-deep)}
+.offer .oname{font-family:var(--display);font-weight:700;font-size:1.55rem;color:var(--ink);margin-bottom:6px}
+.offer .price{font-family:var(--mono);font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:24px}
+.offer .price span{color:var(--amber-deep)}
+
+/* triad — ink */
+.triad-sec{background:var(--ink);color:var(--paper)}
+.triad-sec h2{color:var(--paper);max-width:16ch}
+.triad-sec .sec-head p{color:var(--muted-ink);font-size:1.1rem;margin-top:16px}
+.triad{display:grid;grid-template-columns:repeat(3,1fr);gap:46px;margin-top:58px}
+.tri{border-top:2px solid var(--amber);padding-top:24px}
+.tri .tv{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);letter-spacing:-.02em;color:var(--paper);margin-bottom:16px}
+.tri p{color:var(--muted-ink);font-size:1.04rem;line-height:1.5}
+.triad-sec .note{margin-top:54px;font-family:var(--mono);font-size:.92rem;letter-spacing:.02em;color:var(--muted-ink);border-left:2px solid var(--amber);padding-left:20px;max-width:64ch}
+.triad-sec .note b{color:var(--paper);font-weight:600}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:34px}
+.st{border-top:1px solid var(--line);padding-top:20px}
+.st .n{font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.1em;color:var(--amber-deep);margin-bottom:14px}
+.st h3{margin-bottom:8px}
+.st p{font-size:.94rem;line-height:1.45}
+
+/* founder */
+.founder{background:var(--paper-2)}
+.founder-grid{display:grid;grid-template-columns:210px 1fr;gap:48px;align-items:center}
+.fphoto{width:210px;height:250px;background:linear-gradient(160deg,var(--ink),var(--ink-2));border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted-ink);text-align:center;padding:20px}
+.founder .fname{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--ink);margin-bottom:4px;letter-spacing:-.02em}
+.founder .frole{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:22px}
+.founder p{font-size:1.12rem;color:var(--ink);line-height:1.5;margin-bottom:14px;max-width:58ch}
+.founder p.fmut{color:var(--muted);font-size:1rem}
+.todo{background:rgba(255,158,27,.16);color:var(--amber-deep);font-family:var(--mono);font-size:.74rem;padding:1px 7px;border-radius:2px;font-weight:600}
+
+/* octobre */
+.octo{font-size:1.08rem;color:var(--muted);max-width:78ch;border-left:2px solid var(--amber);padding-left:24px;line-height:1.55}
+.octo b{color:var(--ink);font-weight:600}
+
+/* final */
+.final{background:var(--ink);color:var(--paper);text-align:center}
+.final h2{color:var(--paper);max-width:20ch;margin:0 auto 18px;font-size:clamp(2rem,4.4vw,3.3rem)}
+.final p{color:var(--muted-ink);max-width:48ch;margin:0 auto 32px;font-size:1.18rem}
+.final .btn{padding:18px 32px;font-size:.9rem}
+.final .askmeta{margin-top:24px;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--muted-ink)}
+.final .askmeta b{color:var(--amber)}
+
+/* footer */
+.ftr{background:var(--ink-2);color:var(--muted-ink);padding:50px 0 40px;font-size:.88rem}
+.ftr-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:flex-start}
+.ftr .logo{color:var(--paper)}
+.ftr a{color:var(--muted-ink);transition:color .2s}.ftr a:hover{color:var(--amber)}
+.ftr .fcol{display:flex;flex-direction:column;gap:9px}
+.ftr .fcol .fhead{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);margin-bottom:4px}
+.ftr .copy{width:100%;border-top:1px solid var(--line-ink);margin-top:36px;padding-top:22px;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* sticky mobile cta */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:12px 16px;transform:translateY(110%);transition:transform .3s;display:none}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .btn{width:100%;justify-content:center}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* responsive */
+@media(max-width:900px){
+  .nav .lnk{display:none}.burger{display:flex}
+  .nav.open{position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;padding:18px 30px;border-bottom:1px solid var(--line);gap:18px}
+  .nav.open .lnk{display:block;font-size:.95rem;opacity:1}
+  .hdr .btn{display:none}
+  .offers{grid-template-columns:1fr;gap:48px}
+  .offer.left{padding-right:0;border-right:0;border-bottom:1px solid var(--line);padding-bottom:48px}
+  .offer.right{padding-left:0}
+  .triad{grid-template-columns:1fr;gap:34px}
+  .steps{grid-template-columns:1fr 1fr;gap:28px}
+  .founder-grid{grid-template-columns:1fr;gap:26px}.fphoto{width:100%;height:210px}
+  .sticky-cta{display:block}
+  .sec{padding:80px 0}
+}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
+<style>
+.subhero{padding:78px 0 40px}
+.crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-bottom:24px;display:inline-flex;gap:8px}
+.crumb a{color:var(--muted)}.crumb a:hover{color:var(--amber-deep)}
+.pains{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 44px;margin-top:8px}
+.pn{border-top:2px solid var(--amber);padding-top:18px}
+.pn .pl{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:10px;display:block}
+.pn p{font-size:1.06rem;color:var(--ink);line-height:1.4}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:14px}
+.tier{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column}
+.tier.feat{border-top:2px solid var(--amber)}
+.tier .tlab{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.tier.feat .tlab{color:var(--amber-deep)}
+.tier h3{font-size:1.22rem;margin-bottom:10px;line-height:1.15}
+.tier p{font-size:1rem;color:var(--ink);margin-bottom:18px;line-height:1.4}
+.tier .tprice{margin-top:auto;font-family:var(--mono);font-weight:600;font-size:.92rem;color:var(--ink)}
+.tier .tprice span{color:var(--amber-deep)}
+.wins.two{columns:2;column-gap:44px}
+@media(max-width:900px){.pains{grid-template-columns:1fr}.tiers{grid-template-columns:1fr;gap:30px}.wins.two{columns:1}}
+.sb{background:var(--paper-2)}
+.sb-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;border-top:2px solid var(--amber);padding-top:26px}
+.sb-card .sbn{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em}
+.sb-card p{font-size:1.04rem;color:var(--ink);max-width:52ch}
+</style>
+</head><body>
+<!-- HEADER -->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a href="index.html" class="logo">LEGAL CORTEX<span class="dot"></span><small>Performance juridique</small></a>
+    <nav class="nav" id="nav">
+      <a class="lnk" href="#offres">Offres</a>
+      <a class="lnk" href="#methode">Méthode</a>
+      <a class="lnk" href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://cal.com/legal-cortex/echange">Réserver un échange</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero subhero">
+ <div class="wrap">
+  <span class="crumb reveal"><a href="index.html">← Accueil</a> / Dirigeant · PME</span>
+  <span class="eyebrow reveal" style="display:block;margin-bottom:22px">Parcours · Dirigeant · PME · DAF · DG</span>
+  <h1 class="reveal">Vos pratiques juridiques <span class="mark">freinent</span> vos signatures et vos paiements.</h1>
+  <p class="sub reveal">En quelques jours, on trouve ce qui bloque — et on le débloque. <b>Sans complexité inutile.</b></p>
+  <div class="hero-cta reveal">
+   <a class="btn btn-primary" href="https://cal.com/legal-cortex/echange">Réserver un échange <span class="arr">→</span></a>
+   <a class="btn btn-ghost" href="#offres">Voir l'offre</a>
+  </div>
+  <div class="micro reveal"><span><b>À partir de 5 000 € HT</b></span><span class="sep"></span><span>Intervention courte</span><span class="sep"></span><span>Effet visible, vite</span></div>
+ </div>
+</section>
+
+<section class="proof"><div class="wrap">
+ <span>Signatures <b>accélérées</b></span><span class="sep"></span>
+ <span>Cash <b>débloqué</b></span><span class="sep"></span>
+ <span>Validations <b>fluidifiées</b></span><span class="sep"></span>
+ <span>Conseil senior, <b>zéro blabla</b></span>
+</div></section>
+
+<section class="sec">
+ <div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Votre réalité</span><h2>Le problème, ce n'est pas l'absence de juriste.</h2><p style="font-size:1.1rem;margin-top:14px;color:var(--ink)">C'est que vos pratiques juridiques ralentissent votre business.</p></div>
+  <div class="pains">
+   <div class="pn reveal"><span class="pl">Cash bloqué</span><p>Des paiements en retard. De la trésorerie qui dort.</p></div>
+   <div class="pn reveal"><span class="pl">Signatures lentes</span><p>Des contrats qui traînent. Des deals qui refroidissent.</p></div>
+   <div class="pn reveal"><span class="pl">Validations qui coincent</span><p>Des circuits flous ou trop lourds. Les ventes ralentissent.</p></div>
+   <div class="pn reveal"><span class="pl">Règles peu claires</span><p>Des pratiques diffuses, mal comprises par les équipes.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec triad-sec" id="offres">
+ <div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow on-ink">Offre dédiée</span><h2>Déblocage Business</h2><p>Une intervention courte, orientée action. On trouve le point qui bloque — on le traite, on le sécurise, on l'automatise.</p></div>
+  <p class="note reveal" style="margin-top:8px;margin-bottom:8px">Tarif : <b>à partir de 5 000 € HT</b>.</p>
+ </div>
+</section>
+
+<section class="sec">
+ <div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Ce qu'on débloque</span></div>
+  <ul class="wins two reveal">
+   <li>Le blocage prioritaire, diagnostiqué.</li>
+   <li>Le point contractuel ou processuel clé, traité.</li>
+   <li>Le flux devis → contrat → facture, fluidifié.</li>
+   <li>Un circuit de validation, sécurisé.</li>
+   <li>Vos paiements, relancés de façon structurée.</li>
+   <li>Une automatisation simple, rattachée à la douleur.</li>
+  </ul>
+  <p class="octo reveal" style="margin-top:26px">Un besoin qui dépasse le forfait ? <b>Mission sur mesure</b>, chiffrée à part — sans forcer l'engagement initial.</p>
+ </div>
+</section>
+
+<section class="sec sb">
+ <div class="wrap">
+  <div class="sec-head reveal" style="margin-bottom:24px"><span class="eyebrow">Autre besoin</span></div>
+  <div class="sb-card reveal">
+   <div><div class="sbn">Renfort Contrats-IA</div><p>Le sujet est avant tout contractuel — une négo, une signature, un kit à produire ? C'est par ici.</p></div>
+   <a class="btn btn-ghost" href="directions-juridiques.html">Voir Renfort Contrats-IA →</a>
+  </div>
+ </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec founder" id="fondateur">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:36px"><span class="eyebrow">Le fondateur</span></div>
+    <div class="founder-grid">
+      <div class="fphoto reveal">[ PHOTO<br>À INTÉGRER ]</div>
+      <div class="reveal">
+        <div class="fname">Baou Landry <span class="todo">[À COMPLÉTER]</span></div>
+        <div class="frole">Fondateur · Legal Cortex</div>
+        <p>14 ans en legal ops. Une conviction : le droit crée de la valeur quand il sert l'exécution — pas quand il l'alourdit.</p>
+        <p class="fmut">LEGAL CORTEX, c'est ça. Le juridique au service du business, traité comme un levier, pas comme un frein. <span class="todo">[À COMPLÉTER : parcours, références, secteurs]</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FINAL -->
+<section class="sec final" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Un sujet juridique bloque votre business ?</h2>
+    <p class="reveal">30 minutes pour savoir si on peut le débloquer. Sans engagement.</p>
+    <a class="btn btn-primary reveal" href="https://cal.com/legal-cortex/echange">Réserver un échange <span class="arr">→</span></a>
+    <p class="askmeta reveal">À la réservation : <b>fonction · structure · sujet · urgence.</b></p>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div class="fcol">
+      <a href="index.html" class="logo">LEGAL CORTEX<span class="dot"></span></a>
+      <span style="max-width:32ch">Le juridique qui débloque votre business.</span>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Parcours</span>
+      <a href="directions-juridiques.html">Directions juridiques</a>
+      <a href="pme.html">Dirigeants · PME</a>
+      <a href="#offres">Offres</a>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Cabinet</span>
+      <a href="#methode">Méthode</a>
+      <a href="#fondateur">Fondateur</a>
+      <a href="https://cal.com/legal-cortex/echange">Réserver un échange</a>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Contact</span>
+      <a href="mailto:contact@legalcortex.fr">contact@legalcortex.fr <span class="todo">[À COMPLÉTER]</span></a>
+    </div>
+    <div class="copy">
+      <span>© 2026 LEGAL CORTEX</span>
+      <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-primary" href="https://cal.com/legal-cortex/echange">Réserver un échange →</a>
+</div>
+<script>
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const sticky=document.getElementById('stickyCta');let ls=false;
+window.addEventListener('scroll',()=>{const s=window.scrollY>620;if(s!==ls){sticky.classList.toggle('show',s);ls=s;}},{passive:true});
+</script>
+</body></html>

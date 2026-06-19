@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEGAL CORTEX — Le juridique qui débloque votre business</title>
+<meta name="description" content="Expertise juridique senior, réflexe business, exécution terrain. LEGAL CORTEX clarifie, sécurise et débloque les sujets juridiques qui freinent signatures, paiements et décisions. À partir de 5 000 € HT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --paper:#F4F3EF; --paper-2:#ECEAE3;
+  --ink:#0D1420; --ink-2:#161F2E;
+  --amber:#FF9E1B; --amber-deep:#D9720A;
+  --muted:#586173; --muted-ink:#8E9AAB;
+  --line:#DCD9D0; --line-ink:rgba(255,255,255,.13);
+  --maxw:1180px;
+  --display:'Space Grotesk',sans-serif;
+  --body:'IBM Plex Sans',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--amber-deep)}
+.eyebrow.on-ink{color:var(--amber)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.0;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,3.6vw,2.85rem)}
+h3{font-size:1.12rem;letter-spacing:-.01em;line-height:1.2}
+p{color:var(--muted)}
+.mark{background:linear-gradient(transparent 56%,rgba(255,158,27,.55) 56%);padding:0 .04em}
+
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.03em;padding:16px 26px;border-radius:2px;cursor:pointer;border:1.5px solid transparent;transition:transform .15s,background .2s,color .2s,box-shadow .2s}
+.btn-primary{background:var(--amber);color:var(--ink)}
+.btn-primary:hover{background:#ffad3d;transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(255,158,27,.75)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(244,243,239,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--display);font-weight:700;font-size:1.16rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:9px}
+.logo .dot{width:7px;height:7px;background:var(--amber);border-radius:50%;display:inline-block;transform:translateY(-2px)}
+.logo small{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a.lnk{font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;opacity:.65;transition:opacity .2s}
+.nav a.lnk:hover{opacity:1}
+.hdr .btn{padding:11px 18px}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:22px;height:2px;background:var(--ink);display:block}
+
+/* hero */
+.hero{padding:94px 0 60px}
+.hero .eyebrow{display:block;margin-bottom:26px}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.1rem);max-width:20ch;margin-bottom:28px;line-height:1.02}
+.hero .sub{font-size:clamp(1.08rem,1.7vw,1.35rem);color:var(--ink);font-weight:400;max-width:58ch;margin-bottom:14px;line-height:1.45}
+.hero .sub b{font-weight:600}
+.micro{font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:30px}
+.micro b{color:var(--ink);font-weight:600}
+.micro .sep{width:4px;height:4px;background:var(--amber);border-radius:50%;flex:none}
+
+/* hero doors — prominent */
+.hero-doors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px;max-width:820px}
+.hdoor{display:flex;flex-direction:column;gap:10px;padding:24px 26px;border:1.5px solid var(--ink);border-radius:3px;background:#fff;transition:transform .2s,border-color .2s,box-shadow .2s}
+.hdoor:hover{border-color:var(--amber);transform:translateY(-3px);box-shadow:0 16px 38px -20px rgba(13,20,32,.5)}
+.hdoor .hl{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hdoor .ht{font-family:var(--display);font-weight:600;font-size:1.16rem;line-height:1.15;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:14px;letter-spacing:-.01em}
+.hdoor .ht .ar{font-family:var(--mono);color:var(--amber-deep);font-weight:600;transition:transform .2s;flex:none}
+.hdoor:hover .ht .ar{transform:translateX(5px)}
+
+/* marquee */
+.marquee{background:var(--ink);overflow:hidden}
+.mq-track{display:flex;align-items:center;width:max-content;animation:mq 30s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-it{font-family:var(--mono);font-size:.82rem;letter-spacing:.05em;color:var(--paper);padding:20px 0;white-space:nowrap}
+.mq-dot{width:5px;height:5px;background:var(--amber);border-radius:50%;margin:0 30px;flex:none}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){
+  .mq-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto;gap:8px 0}
+  .mq-it{padding:8px 0}
+}
+
+/* section scaffold */
+.sec{padding:100px 0}
+.sec.ink{background:var(--ink)}
+.sec.ink .eyebrow{color:var(--amber)}
+.sec.ink h2{color:var(--paper)}
+.sec.ink .sec-head p,.sec.ink .sec-head .sub-lead{color:var(--muted-ink)}
+.sec.ink .st h3{color:var(--paper)}
+.sec.ink .st p{color:var(--muted-ink)}
+.sec.ink .st .n{color:var(--amber)}
+.sec-head{max-width:64ch;margin-bottom:50px}
+.sec-head .eyebrow{display:block;margin-bottom:18px}
+.sec-head h2{max-width:20ch}
+.sec-head .sub-lead{margin-top:16px;font-size:1.1rem;color:var(--ink);line-height:1.45;max-width:60ch}
+
+/* constat */
+.verbatims{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+.vb{background:#fff;border:1px solid var(--line);border-left:2px solid var(--amber);border-radius:3px;padding:28px 30px}
+.vb p{font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.4;color:var(--ink);letter-spacing:-.01em;margin-bottom:16px}
+.vb .who{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.diag{margin-top:38px;font-size:1.14rem;line-height:1.5;color:var(--ink);max-width:74ch}
+.diag b{font-weight:600}
+
+/* offers */
+.offers-sec{background:var(--paper-2)}
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:6px}
+.offer{padding:6px 0}
+.offer.left{padding-right:58px;border-right:1px solid var(--line)}
+.offer.right{padding-left:58px}
+.flab{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-deep);display:block;margin:22px 0 12px}
+.flab.first{margin-top:0}
+.offer .target{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.01em;color:var(--ink)}
+.offer .enjeux{font-family:var(--display);font-weight:500;font-size:1.18rem;line-height:1.25;color:var(--ink);letter-spacing:-.01em}
+.deliv{list-style:none}
+.deliv li{position:relative;padding-left:26px;margin-bottom:11px;font-size:1.02rem;color:var(--ink);line-height:1.35}
+.deliv li::before{content:"→";position:absolute;left:0;top:0;font-family:var(--mono);font-weight:600;color:var(--amber-deep)}
+.offer .oname{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--ink);margin:26px 0 6px;letter-spacing:-.02em}
+.offer .price{font-family:var(--mono);font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:22px}
+.offer .price span{color:var(--amber-deep)}
+
+/* method */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:6px}
+.st{border-top:2px solid var(--amber);padding-top:22px}
+.st .n{font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.1em;color:var(--amber-deep);margin-bottom:14px}
+.st h3{margin-bottom:10px;font-size:1.18rem;line-height:1.2}
+.st p{font-size:1rem;line-height:1.45}
+
+/* cta intermédiaire */
+.cta-mid{border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;padding:70px 0}
+.cta-mid h2{margin-bottom:26px;font-size:clamp(1.7rem,3.2vw,2.5rem)}
+.cta-mid h2 .mark{padding:0 .06em}
+
+/* adn (ink) */
+.adn{background:var(--ink)}
+.adn .eyebrow{color:var(--amber)}
+.adn h2{color:var(--paper)}
+.adn .sec-head p{color:var(--muted-ink);font-size:1.1rem;margin-top:14px}
+.triad{display:grid;grid-template-columns:repeat(3,1fr);gap:46px;margin-top:54px}
+.tri{border-top:2px solid var(--amber);padding-top:24px}
+.tri .tv{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;color:var(--paper);margin-bottom:16px}
+.tri p{color:var(--muted-ink);font-size:1.04rem;line-height:1.5}
+.tri p b{color:var(--paper)}
+.conviction{margin-top:60px;border-left:2px solid var(--amber);padding-left:26px;max-width:72ch}
+.conviction p{font-family:var(--display);font-weight:500;font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.3;letter-spacing:-.01em;color:var(--paper)}
+.conviction .sig{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-top:16px;display:block}
+
+/* final — amber climax */
+.final{background:var(--amber);color:var(--ink);text-align:center}
+.final h2{color:var(--ink);max-width:20ch;margin:0 auto 18px;font-size:clamp(2rem,4.2vw,3.1rem)}
+.final p{color:rgba(13,20,32,.72);max-width:48ch;margin:0 auto 32px;font-size:1.18rem}
+.final .btn{padding:18px 32px;font-size:.9rem}
+.final .btn-primary{background:var(--ink);color:var(--paper)}
+.final .btn-primary:hover{background:var(--ink-2);transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(13,20,32,.55)}
+.final .askmeta{margin-top:24px;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:rgba(13,20,32,.7)}
+.final .askmeta b{color:var(--ink)}
+
+/* footer */
+.ftr{background:var(--ink-2);color:var(--muted-ink);padding:54px 0 40px;font-size:.88rem}
+.ftr-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:34px;align-items:flex-start}
+.ftr .logo{color:var(--paper)}
+.ftr a{color:var(--muted-ink);transition:color .2s}.ftr a:hover{color:var(--amber)}
+.ftr .fcol{display:flex;flex-direction:column;gap:9px}
+.ftr .fcol .fhead{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);margin-bottom:4px}
+.ftr .copy{width:100%;border-top:1px solid var(--line-ink);margin-top:38px;padding-top:22px;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.todo{background:rgba(255,158,27,.16);color:var(--amber-deep);font-family:var(--mono);font-size:.74rem;padding:1px 7px;border-radius:2px;font-weight:600}
+
+/* sticky mobile cta */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:12px 16px;transform:translateY(110%);transition:transform .3s;display:none}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .btn{width:100%;justify-content:center}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* responsive */
+@media(max-width:900px){
+  .nav .lnk{display:none}.burger{display:flex}
+  .nav.open{position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;padding:18px 30px;border-bottom:1px solid var(--line);gap:18px}
+  .nav.open .lnk{display:block;font-size:.95rem;opacity:1}
+  .hdr .btn{display:none}
+  .hero-doors{grid-template-columns:1fr;max-width:560px}
+  .verbatims{grid-template-columns:1fr}
+  .offers{grid-template-columns:1fr;gap:0}
+  .offer.left{padding-right:0;border-right:0;border-bottom:1px solid var(--line);padding-bottom:44px;margin-bottom:44px}
+  .offer.right{padding-left:0}
+  .steps3,.triad{grid-template-columns:1fr;gap:32px}
+  .sticky-cta{display:block}
+  .sec{padding:78px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a href="index.html" class="logo">LEGAL CORTEX<span class="dot"></span><small>Performance juridique</small></a>
+    <nav class="nav" id="nav">
+      <a class="lnk" href="#offres">Offres</a>
+      <a class="lnk" href="#methode">Méthode</a>
+      <a class="lnk" href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://cal.com/legal-cortex/echange">Réserver un échange</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Cabinet de performance juridique</span>
+    <h1 class="reveal">Le juridique ne devrait jamais <span class="mark">ralentir</span> vos signatures, paiements ou décisions.</h1>
+    <p class="sub reveal">Expertise juridique senior, réflexe business, exécution terrain : LEGAL CORTEX <b>clarifie, sécurise et débloque</b> les sujets qui freinent vos équipes.</p>
+
+    <div class="hero-doors reveal">
+      <a class="hdoor" href="directions-juridiques.html">
+        <span class="hl">Direction juridique</span>
+        <span class="ht">J'ai besoin de renfort contractuel <span class="ar">→</span></span>
+      </a>
+      <a class="hdoor" href="pme.html">
+        <span class="hl">Dirigeant · PME</span>
+        <span class="ht">Je débloque mes signatures / paiements <span class="ar">→</span></span>
+      </a>
+    </div>
+
+    <div class="micro reveal">
+      <span><b>À partir de 5 000 € HT</b></span><span class="sep"></span>
+      <span>Sujet traité, pas analysé</span><span class="sep"></span>
+      <span>Sans engagement</span>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee" aria-label="Points clés">
+  <div class="mq-track">
+    <span class="mq-it">14 ans d'expérience juridique business</span><span class="mq-dot"></span>
+    <span class="mq-it">Intervention en quelques jours</span><span class="mq-dot"></span>
+    <span class="mq-it">Livrables prêts à l'emploi</span><span class="mq-dot"></span>
+    <span class="mq-it">Conseil senior, zéro jargon</span><span class="mq-dot"></span>
+    <span class="mq-it">14 ans d'expérience juridique business</span><span class="mq-dot"></span>
+    <span class="mq-it">Intervention en quelques jours</span><span class="mq-dot"></span>
+    <span class="mq-it">Livrables prêts à l'emploi</span><span class="mq-dot"></span>
+    <span class="mq-it">Conseil senior, zéro jargon</span><span class="mq-dot"></span>
+  </div>
+</section>
+
+<!-- CONSTAT -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Le constat</span>
+      <h2>Le juridique : l'atout business que tout le monde subit.</h2>
+      <p class="sub-lead">L'expertise juridique déconnectée du terrain devient un frein. Sous-dimensionnée, elle devient un goulot d'étranglement.</p>
+    </div>
+
+    <span class="flab first reveal" style="margin-bottom:16px">Ce que nous entendons sur le terrain</span>
+    <div class="verbatims">
+      <div class="vb reveal">
+        <p>« J'ai trois fois plus de demandes qu'il y a un an, à ressources constantes. Mon équipe ne fait plus de juridique : elle gère l'urgence. »</p>
+        <span class="who">— Direction juridique, groupe ETI</span>
+      </div>
+      <div class="vb reveal">
+        <p>« Notre process contractuel est jugé trop complexe par nos clients. On perd des deals à cause de ça. »</p>
+        <span class="who">— Dirigeant, PME en forte croissance</span>
+      </div>
+    </div>
+
+    <p class="diag reveal">Ce n'est pas un problème de compétence, mais d'<b>ingénierie</b>. LEGAL CORTEX y répond par des solutions sur mesure, alliant <b>expertise juridique, fluidité d'exécution et impact business</b>.</p>
+  </div>
+</section>
+
+<!-- OFFRES -->
+<section class="sec offers-sec" id="offres">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Nos offres</span>
+      <h2>Nous déployons des leviers d'action calibrés sur vos enjeux business.</h2>
+    </div>
+    <div class="offers">
+
+      <div class="offer left reveal">
+        <span class="flab first">Cible</span>
+        <div class="target">Direction juridique</div>
+        <span class="flab">Enjeux</span>
+        <div class="enjeux">Trop d'urgences. Trop de contrats. Pas le temps de structurer.</div>
+        <span class="flab">Réalisations &amp; livrables</span>
+        <ul class="deliv">
+          <li>Revue contractuelle</li>
+          <li>Préparation de négociations &amp; arbitrages</li>
+          <li>Négociations contractuelles</li>
+          <li>Kit d'exécution opérationnelle</li>
+        </ul>
+        <div class="oname">Renfort Contrats-IA</div>
+        <div class="price">À partir de <span>5 000 € HT</span></div>
+        <a class="btn btn-primary" href="directions-juridiques.html">J'ai besoin de renfort <span class="arr">→</span></a>
+      </div>
+
+      <div class="offer right reveal">
+        <span class="flab first">Cible</span>
+        <div class="target">Dirigeant · PME</div>
+        <span class="flab">Enjeux</span>
+        <div class="enjeux">Des signatures qui traînent. Du cash qui dort. Des validations qui coincent.</div>
+        <span class="flab">Réalisations &amp; livrables</span>
+        <ul class="deliv">
+          <li>Diagnostic des blocages et retards de signature</li>
+          <li>Optimisation contractuelle d'une trame de vente</li>
+          <li>Acculturation juridique des forces de vente</li>
+          <li>Automatisation du process contractuel : vente, relance, encaissement</li>
+        </ul>
+        <div class="oname">Déblocage Business</div>
+        <div class="price">À partir de <span>5 000 € HT</span></div>
+        <a class="btn btn-primary" href="pme.html">Débloquer ou libérer mon business <span class="arr">→</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- METHODE -->
+<section class="sec ink" id="methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">La méthode</span>
+      <h2>Une force d'intervention juridique sur mesure, orientée résultat business.</h2>
+    </div>
+    <div class="steps3">
+      <div class="st reveal">
+        <div class="n">01</div>
+        <h3>Qualification confidentielle</h3>
+        <p>Vous exposez l'urgence, le contexte business et le résultat attendu.</p>
+      </div>
+      <div class="st reveal">
+        <div class="n">02</div>
+        <h3>Architecture de solution 360°</h3>
+        <p>Nous croisons droit, conformité, assurance et process pour concevoir une réponse sécurisée, adaptée à votre sujet.</p>
+      </div>
+      <div class="st reveal">
+        <div class="n">03</div>
+        <h3>Déploiement &amp; livraison opérationnelle</h3>
+        <p>Nous intervenons sur le périmètre défini et livrons un kit exploitable : matrice, règles d'usage, circuit de validation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INTERMEDIAIRE -->
+<section class="cta-mid">
+  <div class="wrap">
+    <h2 class="reveal">Votre sujet n'attend pas. <span class="mark">Nous non plus.</span></h2>
+    <a class="btn btn-primary reveal" href="https://cal.com/legal-cortex/echange">Réserver un échange <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ADN / LEVIERS -->
+<section class="sec adn">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Notre ADN</span>
+      <h2>L'ingénierie juridique au service de la croissance business.</h2>
+      <p>Trois leviers guident notre action.</p>
+    </div>
+    <div class="triad">
+      <div class="tri reveal"><div class="tv">Sécuriser</div><p>Traiter les risques critiques sans paralyser l'exécution.</p></div>
+      <div class="tri reveal"><div class="tv">Clarifier</div><p>Transformer les sujets complexes en règles d'usage et d'arbitrage, lisibles et actionnables par les opérationnels.</p></div>
+      <div class="tri reveal"><div class="tv">Accélérer</div><p>Supprimer les frictions qui ralentissent vos signatures et vos paiements. Chaque étape est accélérée, de façon <b>mesurable</b>.</p></div>
+    </div>
+    <div class="conviction reveal">
+      <p>« LEGAL CORTEX, c'est une conviction : le droit crée de la valeur quand il connecte l'expertise aux enjeux et aux besoins opérationnels. »</p>
+      <span class="sig">Baou Landry · Fondateur</span>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Un sujet juridique bloque votre business ?</h2>
+    <p class="reveal">30 minutes pour savoir si on peut le débloquer. Sans engagement.</p>
+    <a class="btn btn-primary reveal" href="https://cal.com/legal-cortex/echange">Réserver un échange <span class="arr">→</span></a>
+    <p class="askmeta reveal">À la réservation : <b>fonction · structure · sujet · urgence.</b></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div class="fcol">
+      <a href="index.html" class="logo">LEGAL CORTEX<span class="dot"></span></a>
+      <span style="max-width:30ch">Le juridique qui débloque votre business.</span>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Nos expertises</span>
+      <span>Direction juridique externalisée</span>
+      <span>Renfort Contrats-IA</span>
+      <span>Renfort Conformité · RSE</span>
+      <span>Contract &amp; Claim Management</span>
+      <span>Legal Ops</span>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Parcours</span>
+      <a href="directions-juridiques.html">Directions juridiques</a>
+      <a href="pme.html">Dirigeants · PME</a>
+      <a href="#offres">Offres</a>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Cabinet</span>
+      <a href="#methode">Méthode</a>
+      <a href="https://cal.com/legal-cortex/echange">Réserver un échange</a>
+      <a href="mailto:contact@legalcortex.fr">contact@legalcortex.fr <span class="todo">[À COMPLÉTER]</span></a>
+    </div>
+    <div class="copy">
+      <span>© 2026 LEGAL CORTEX</span>
+      <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-primary" href="https://cal.com/legal-cortex/echange">Réserver un échange →</a>
+</div>
+
+<script>
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const sticky=document.getElementById('stickyCta');let ls=false;
+window.addEventListener('scroll',()=>{const s=window.scrollY>640;if(s!==ls){sticky.classList.toggle('show',s);ls=s;}},{passive:true});
+</script>
+</body>
+</html>
