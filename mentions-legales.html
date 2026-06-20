@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales &amp; RGPD — LEGAL CORTEX</title><meta name="description" content="Mentions légales, éditeur, hébergement et politique de protection des données personnelles du site legal-cortex.com.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --paper:#F4F3EF; --paper-2:#ECEAE3;
+  --ink:#0D1420; --ink-2:#161F2E;
+  --amber:#FF9E1B; --amber-deep:#D9720A;
+  --muted:#586173; --muted-ink:#8E9AAB;
+  --line:#DCD9D0; --line-ink:rgba(255,255,255,.13);
+  --maxw:1180px;
+  --display:'Space Grotesk',sans-serif;
+  --body:'IBM Plex Sans',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--amber-deep)}
+.eyebrow.on-ink{color:var(--amber)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.0;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,3.1rem)}
+h3{font-size:1.12rem;letter-spacing:-.01em;line-height:1.2}
+p{color:var(--muted)}
+.mark{background:linear-gradient(transparent 56%,rgba(255,158,27,.55) 56%);padding:0 .04em}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.03em;padding:16px 26px;border-radius:2px;cursor:pointer;border:1.5px solid transparent;transition:transform .15s,background .2s,color .2s,box-shadow .2s}
+.btn-primary{background:var(--amber);color:var(--ink)}
+.btn-primary:hover{background:#ffad3d;transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(255,158,27,.75)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-ghost.on-ink{color:var(--paper);border-color:rgba(255,255,255,.45)}
+.btn-ghost.on-ink:hover{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(244,243,239,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--display);font-weight:700;font-size:1.16rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:9px}
+.logo .dot{width:7px;height:7px;background:var(--amber);border-radius:50%;display:inline-block;transform:translateY(-2px)}
+.logo small{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a.lnk{font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;opacity:.65;transition:opacity .2s}
+.nav a.lnk:hover{opacity:1}
+.hdr .btn{padding:11px 18px}
+.burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:22px;height:2px;background:var(--ink);display:block}
+
+/* hero */
+.hero{padding:96px 0 68px}
+.hero .eyebrow{display:block;margin-bottom:26px}
+.hero h1{font-size:clamp(2.6rem,7.2vw,5.1rem);max-width:15ch;margin-bottom:30px;line-height:.98}
+.hero .sub{font-size:clamp(1.15rem,1.9vw,1.5rem);color:var(--ink);font-weight:400;max-width:46ch;margin-bottom:38px;line-height:1.4}
+.hero .sub b{font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+.micro{font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.micro b{color:var(--ink);font-weight:600}
+.micro .sep{width:4px;height:4px;background:var(--amber);border-radius:50%;flex:none}
+
+/* picker (doors) */
+.picker{margin-top:54px;border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
+.picker .pk-lab{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.pk{font-family:var(--display);font-weight:600;font-size:1.08rem;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+.pk span{font-family:var(--mono);color:var(--amber-deep);transition:transform .2s}
+.pk:hover{border-color:var(--amber)}.pk:hover span{transform:translateX(4px)}
+
+/* proof strip */
+.proof{background:var(--ink)}
+.proof .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;align-items:center;padding:22px 30px;font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:var(--muted-ink)}
+.proof b{color:var(--paper);font-weight:600}
+.proof .sep{width:5px;height:5px;background:var(--amber);border-radius:50%}
+
+/* section scaffold */
+.sec{padding:104px 0}
+.sec-head{max-width:60ch;margin-bottom:54px}
+.sec-head .eyebrow{display:block;margin-bottom:18px}
+.sec-head h2{max-width:18ch}
+
+/* offers — editorial, borderless */
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.offer{padding:6px 0}
+.offer.left{padding-right:58px;border-right:1px solid var(--line)}
+.offer.right{padding-left:58px}
+.offer .target{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.offer .pain{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,2.4vw,1.95rem);line-height:1.08;letter-spacing:-.02em;color:var(--ink);margin-bottom:28px}
+.wins{list-style:none;margin-bottom:34px}
+.wins li{position:relative;padding-left:28px;margin-bottom:15px;font-size:1.1rem;color:var(--ink);line-height:1.35}
+.wins li::before{content:"→";position:absolute;left:0;top:0;font-family:var(--mono);font-weight:600;color:var(--amber-deep)}
+.offer .oname{font-family:var(--display);font-weight:700;font-size:1.55rem;color:var(--ink);margin-bottom:6px}
+.offer .price{font-family:var(--mono);font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:24px}
+.offer .price span{color:var(--amber-deep)}
+
+/* triad — ink */
+.triad-sec{background:var(--ink);color:var(--paper)}
+.triad-sec h2{color:var(--paper);max-width:16ch}
+.triad-sec .sec-head p{color:var(--muted-ink);font-size:1.1rem;margin-top:16px}
+.triad{display:grid;grid-template-columns:repeat(3,1fr);gap:46px;margin-top:58px}
+.tri{border-top:2px solid var(--amber);padding-top:24px}
+.tri .tv{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,3.2vw,2.4rem);letter-spacing:-.02em;color:var(--paper);margin-bottom:16px}
+.tri p{color:var(--muted-ink);font-size:1.04rem;line-height:1.5}
+.triad-sec .note{margin-top:54px;font-family:var(--mono);font-size:.92rem;letter-spacing:.02em;color:var(--muted-ink);border-left:2px solid var(--amber);padding-left:20px;max-width:64ch}
+.triad-sec .note b{color:var(--paper);font-weight:600}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:34px}
+.st{border-top:1px solid var(--line);padding-top:20px}
+.st .n{font-family:var(--mono);font-weight:600;font-size:.82rem;letter-spacing:.1em;color:var(--amber-deep);margin-bottom:14px}
+.st h3{margin-bottom:8px}
+.st p{font-size:.94rem;line-height:1.45}
+
+/* founder */
+.founder{background:var(--paper-2)}
+.founder-grid{display:grid;grid-template-columns:210px 1fr;gap:48px;align-items:center}
+.fphoto{width:210px;height:250px;background:linear-gradient(160deg,var(--ink),var(--ink-2));border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted-ink);text-align:center;padding:20px}
+.founder .fname{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--ink);margin-bottom:4px;letter-spacing:-.02em}
+.founder .frole{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:22px}
+.founder p{font-size:1.12rem;color:var(--ink);line-height:1.5;margin-bottom:14px;max-width:58ch}
+.founder p.fmut{color:var(--muted);font-size:1rem}
+.todo{background:rgba(255,158,27,.16);color:var(--amber-deep);font-family:var(--mono);font-size:.74rem;padding:1px 7px;border-radius:2px;font-weight:600}
+
+/* octobre */
+.octo{font-size:1.08rem;color:var(--muted);max-width:78ch;border-left:2px solid var(--amber);padding-left:24px;line-height:1.55}
+.octo b{color:var(--ink);font-weight:600}
+
+/* final */
+.final{background:var(--ink);color:var(--paper);text-align:center}
+.final h2{color:var(--paper);max-width:20ch;margin:0 auto 18px;font-size:clamp(2rem,4.4vw,3.3rem)}
+.final p{color:var(--muted-ink);max-width:48ch;margin:0 auto 32px;font-size:1.18rem}
+.final .btn{padding:18px 32px;font-size:.9rem}
+.final .askmeta{margin-top:24px;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--muted-ink)}
+.final .askmeta b{color:var(--amber)}
+
+/* footer */
+.ftr{background:var(--ink-2);color:var(--muted-ink);padding:50px 0 40px;font-size:.88rem}
+.ftr-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:flex-start}
+.ftr .logo{color:var(--paper)}
+.ftr a{color:var(--muted-ink);transition:color .2s}.ftr a:hover{color:var(--amber)}
+.ftr .fcol{display:flex;flex-direction:column;gap:9px}
+.ftr .fcol .fhead{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);margin-bottom:4px}
+.ftr .copy{width:100%;border-top:1px solid var(--line-ink);margin-top:36px;padding-top:22px;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* sticky mobile cta */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:12px 16px;transform:translateY(110%);transition:transform .3s;display:none}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .btn{width:100%;justify-content:center}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* responsive */
+@media(max-width:900px){
+  .nav .lnk{display:none}.burger{display:flex}
+  .nav.open{position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;padding:18px 30px;border-bottom:1px solid var(--line);gap:18px}
+  .nav.open .lnk{display:block;font-size:.95rem;opacity:1}
+  .hdr .btn{display:none}
+  .offers{grid-template-columns:1fr;gap:48px}
+  .offer.left{padding-right:0;border-right:0;border-bottom:1px solid var(--line);padding-bottom:48px}
+  .offer.right{padding-left:0}
+  .triad{grid-template-columns:1fr;gap:34px}
+  .steps{grid-template-columns:1fr 1fr;gap:28px}
+  .founder-grid{grid-template-columns:1fr;gap:26px}.fphoto{width:100%;height:210px}
+  .sticky-cta{display:block}
+  .sec{padding:80px 0}
+}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
+<style>
+.subhero{padding:78px 0 40px}
+.crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-bottom:24px;display:inline-flex;gap:8px}
+.crumb a{color:var(--muted)}.crumb a:hover{color:var(--amber-deep)}
+.pains{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 44px;margin-top:8px}
+.pn{border-top:2px solid var(--amber);padding-top:18px}
+.pn .pl{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:10px;display:block}
+.pn p{font-size:1.06rem;color:var(--ink);line-height:1.4}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:14px}
+.tier{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column}
+.tier.feat{border-top:2px solid var(--amber)}
+.tier .tlab{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.tier.feat .tlab{color:var(--amber-deep)}
+.tier h3{font-size:1.22rem;margin-bottom:10px;line-height:1.15}
+.tier p{font-size:1rem;color:var(--ink);margin-bottom:18px;line-height:1.4}
+.tier .tprice{margin-top:auto;font-family:var(--mono);font-weight:600;font-size:.92rem;color:var(--ink)}
+.tier .tprice span{color:var(--amber-deep)}
+.wins.two{columns:2;column-gap:44px}
+@media(max-width:900px){.pains{grid-template-columns:1fr}.tiers{grid-template-columns:1fr;gap:30px}.wins.two{columns:1}}
+.sb{background:var(--paper-2)}
+.sb-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;border-top:2px solid var(--amber);padding-top:26px}
+.sb-card .sbn{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em}
+.sb-card p{font-size:1.04rem;color:var(--ink);max-width:52ch}
+</style>
+
+<style>
+.legal{max-width:76ch;margin:0 auto}
+.legal .upd{font-family:var(--mono);font-size:.76rem;letter-spacing:.05em;color:var(--muted);margin-bottom:34px;display:block}
+.legal h2{font-size:clamp(1.3rem,2.4vw,1.7rem);margin:44px 0 14px;color:var(--ink)}
+.legal h3{font-size:1.04rem;margin:24px 0 8px;color:var(--ink)}
+.legal p{margin-bottom:13px;line-height:1.62;color:var(--muted)}
+.legal p b,.legal strong{color:var(--ink);font-weight:600}
+.legal ul{margin:6px 0 18px 20px}
+.legal li{margin-bottom:6px;color:var(--muted);line-height:1.5}
+.legal a{color:var(--amber-deep)}.legal a:hover{text-decoration:underline}
+</style>
+</head><body>
+<!-- HEADER -->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a href="index.html" class="logo">LEGAL CORTEX<span class="dot"></span><small>Performance juridique</small></a>
+    <nav class="nav" id="nav">
+      <a class="lnk" href="index.html#offres">Offres</a>
+      <a class="lnk" href="cabinet.html">Cabinet</a>
+      <a class="btn btn-primary" href="https://legalcortex.zohobookings.eu/#/263436000000038048">Réserver un échange</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero subhero">
+ <div class="wrap">
+  <span class="crumb reveal"><a href="index.html">← Accueil</a> / Mentions légales</span>
+  <span class="eyebrow reveal" style="display:block;margin-bottom:22px">Informations légales</span>
+  <h1 class="reveal" style="font-size:clamp(2.2rem,5vw,3.4rem)">Mentions légales <span class="mark">&amp;</span> RGPD</h1>
+ </div>
+</section>
+
+<section class="sec" style="padding-top:30px">
+ <div class="wrap">
+  <div class="legal reveal">
+   <span class="upd">Dernière mise à jour : 20 juin 2026</span>
+
+   <h2>1. Éditeur du site</h2>
+   <p>Le site legal-cortex.com est édité par :</p>
+   <p><b>DNVEX HOLD</b> — Société par actions simplifiée<br>
+   Capital social : 1 000 €<br>
+   Siège social : 9 rue d'Assas, 34300 Agde, France<br>
+   SIREN : 989 635 735 · SIRET : 989 635 735 00016<br>
+   RCS : Béziers · Code APE : 7010Z — Activités des sièges sociaux</p>
+   <p>LEGAL CORTEX est exploité par DNVEX HOLD.</p>
+   <p>Directeur de la publication : DNV STRATEGIES, présidente de DNVEX HOLD, représentée par Landry BAOU.</p>
+   <p>Contact : <a href="mailto:contact@legalcortex.fr">contact@legalcortex.fr</a></p>
+
+   <h2>2. Hébergement</h2>
+   <p>Le site est hébergé par :<br>
+   <b>Netlify, Inc.</b> — 101 2nd Street, San Francisco, CA 94105, États-Unis.</p>
+
+   <h2>3. Objet du site</h2>
+   <p>Le site legal-cortex.com présente les activités, offres, expertises et modalités d'intervention de LEGAL CORTEX. Les informations publiées ont une finalité de présentation commerciale, institutionnelle et informative.</p>
+   <p>Elles ne constituent pas, à elles seules, une consultation juridique personnalisée, une offre contractuelle ferme ou un engagement de mission. Toute intervention de LEGAL CORTEX fait l'objet d'un échange préalable, d'une qualification du besoin et, le cas échéant, d'une proposition de mission ou d'un devis accepté.</p>
+
+   <h2>4. Conditions d'utilisation du site</h2>
+   <p>L'utilisateur s'engage à utiliser le site de manière loyale, conforme aux lois et règlements applicables, sans porter atteinte à son fonctionnement, sa sécurité ou son contenu.</p>
+   <p>DNVEX HOLD s'efforce de fournir des informations exactes, à jour et accessibles. Toutefois, les contenus publiés peuvent évoluer, être corrigés ou supprimés à tout moment, sans préavis. DNVEX HOLD ne saurait être tenue responsable :</p>
+   <ul>
+    <li>d'une interprétation erronée des informations publiées ;</li>
+    <li>d'une décision prise sur la seule base des contenus du site ;</li>
+    <li>d'une indisponibilité temporaire du site ;</li>
+    <li>d'un dommage résultant d'un usage non conforme du site.</li>
+   </ul>
+
+   <h2>5. Propriété intellectuelle</h2>
+   <p>L'ensemble des contenus présents sur le site — textes, structures de pages, offres, formulations, éléments graphiques, marques, logos, méthodes, concepts, supports et contenus rédactionnels — sont protégés par les règles applicables en matière de propriété intellectuelle.</p>
+   <p>Toute reproduction, représentation, adaptation, diffusion ou exploitation non autorisée, totale ou partielle, est interdite sans autorisation écrite préalable de DNVEX HOLD.</p>
+
+   <h2>6. Données personnelles</h2>
+   <p>Dans le cadre de l'utilisation du site, DNVEX HOLD peut être amenée à traiter certaines données personnelles relatives aux prospects, clients, partenaires ou utilisateurs.</p>
+   <h3>Données susceptibles d'être collectées</h3>
+   <ul>
+    <li>nom, prénom ;</li>
+    <li>adresse email, numéro de téléphone ;</li>
+    <li>société, fonction ;</li>
+    <li>sujet de la demande, niveau d'urgence ;</li>
+    <li>message libre ;</li>
+    <li>informations communiquées volontairement lors d'un échange ou d'une demande de rendez-vous.</li>
+   </ul>
+   <h3>Finalités des traitements</h3>
+   <ul>
+    <li>gestion des demandes de contact ;</li>
+    <li>qualification des besoins ;</li>
+    <li>organisation d'un échange ou d'une réunion ;</li>
+    <li>suivi des prospects ;</li>
+    <li>préparation d'une proposition de mission ou d'un devis ;</li>
+    <li>exécution de mesures précontractuelles ou contractuelles ;</li>
+    <li>gestion de la relation commerciale ;</li>
+    <li>conservation de preuves utiles en cas de contestation ;</li>
+    <li>amélioration des échanges et du suivi des demandes.</li>
+   </ul>
+   <h3>Bases légales</h3>
+   <ul>
+    <li>l'exécution de mesures précontractuelles ou contractuelles lorsque la demande vise à qualifier une mission, préparer un devis ou exécuter une prestation ;</li>
+    <li>l'intérêt légitime de DNVEX HOLD à répondre aux demandes, assurer le suivi commercial et sécuriser ses relations professionnelles ;</li>
+    <li>le respect d'obligations légales lorsque certaines données doivent être conservées pour répondre à des obligations comptables, fiscales ou probatoires.</li>
+   </ul>
+
+   <h2>7. Destinataires des données</h2>
+   <p>Les données sont destinées à DNVEX HOLD et aux personnes habilitées à traiter les demandes relatives à LEGAL CORTEX. Elles peuvent également être transmises, lorsque cela est nécessaire :</p>
+   <ul>
+    <li>aux prestataires techniques intervenant pour l'hébergement ou le fonctionnement du site ;</li>
+    <li>aux outils de réunion ou de communication utilisés pour organiser les échanges ;</li>
+    <li>aux conseils ou prestataires intervenant dans le cadre d'une mission, lorsque cela est nécessaire et justifié.</li>
+   </ul>
+
+   <h2>8. Outils tiers utilisés</h2>
+   <p>Le site est hébergé par Netlify. Les échanges ou réunions peuvent être organisés via les outils Zoho (Zoho Bookings, Zoho Meeting). Ces prestataires peuvent traiter certaines données techniques ou de communication dans le cadre de leurs services, selon leurs propres conditions et politiques de confidentialité.</p>
+
+   <h2>9. Durées de conservation</h2>
+   <p>Les données sont conservées pendant une durée proportionnée aux finalités poursuivies. À titre indicatif :</p>
+   <ul>
+    <li>les données relatives aux prospects peuvent être conservées jusqu'à 3 ans à compter du dernier contact actif ;</li>
+    <li>les données relatives aux clients peuvent être conservées pendant la relation contractuelle, puis archivées pendant les durées nécessaires au respect des obligations légales ou à la défense des droits de DNVEX HOLD ;</li>
+    <li>les données liées à l'exercice des droits RGPD sont conservées le temps nécessaire au traitement de la demande et à la conservation d'une preuve de réponse.</li>
+   </ul>
+
+   <h2>10. Droits des personnes concernées</h2>
+   <p>Conformément à la réglementation applicable, vous disposez, selon les conditions prévues par les textes, des droits suivants : accès, rectification, effacement, limitation du traitement, opposition, portabilité lorsque ce droit est applicable, retrait du consentement lorsque le traitement repose sur celui-ci, et définition de directives relatives au sort de vos données après votre décès.</p>
+   <p>Pour exercer vos droits, vous pouvez écrire à <a href="mailto:contact@legalcortex.fr">contact@legalcortex.fr</a>. Une réponse sera apportée dans les délais prévus par la réglementation applicable. En cas de difficulté non résolue, vous pouvez introduire une réclamation auprès de la CNIL.</p>
+
+   <h2>11. Sécurité</h2>
+   <p>DNVEX HOLD met en œuvre des mesures raisonnables destinées à préserver la sécurité, la confidentialité et l'intégrité des données personnelles traitées. L'utilisateur reste responsable de la confidentialité des informations qu'il transmet volontairement. Il est recommandé de ne pas transmettre d'informations confidentielles, sensibles ou couvertes par un secret sans accord préalable exprès.</p>
+
+   <h2>12. Cookies et traceurs</h2>
+   <p>À ce stade, le site a vocation à utiliser uniquement des cookies ou traceurs strictement nécessaires à son fonctionnement technique. Si des outils de mesure d'audience, de suivi marketing ou de publicité soumis à consentement sont ajoutés ultérieurement, la présente page sera mise à jour et un dispositif d'information ou de recueil du consentement sera mis en place.</p>
+
+   <h2>13. Liens externes</h2>
+   <p>Le site peut contenir des liens vers des sites tiers. DNVEX HOLD n'exerce aucun contrôle sur ces sites et ne saurait être tenue responsable de leurs contenus, conditions d'utilisation, politiques de confidentialité ou pratiques en matière de données personnelles.</p>
+
+   <h2>14. Modification de la présente page</h2>
+   <p>DNVEX HOLD peut modifier la présente page à tout moment afin de tenir compte de l'évolution du site, des outils utilisés, des activités de LEGAL CORTEX ou de la réglementation applicable. La version applicable est celle publiée sur le site à la date de consultation.</p>
+  </div>
+ </div>
+</section>
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div class="fcol">
+      <a href="index.html" class="logo">LEGAL CORTEX<span class="dot"></span></a>
+      <span style="max-width:32ch">Cabinet de performance juridique.</span>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Parcours</span>
+      <a href="directions-juridiques.html">Directions juridiques</a>
+      <a href="pme.html">Dirigeants · PME</a>
+      <a href="cabinet.html">Cabinet</a>
+    </div>
+    <div class="fcol">
+      <span class="fhead">Contact</span>
+      <a href="mailto:contact@legalcortex.fr">contact@legalcortex.fr</a>
+      <a href="https://legalcortex.zohobookings.eu/#/263436000000038048">Réserver un échange</a>
+    </div>
+    <div class="copy">
+      <span>© 2026 LEGAL CORTEX · DNVEX HOLD</span>
+      <span><a href="mentions-legales.html">Mentions légales · RGPD</a></span>
+    </div>
+  </div>
+</footer>
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-primary" href="https://legalcortex.zohobookings.eu/#/263436000000038048">Réserver un échange →</a>
+</div>
+<script>
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const sticky=document.getElementById('stickyCta');let ls=false;
+window.addEventListener('scroll',()=>{const s=window.scrollY>620;if(s!==ls){sticky.classList.toggle('show',s);ls=s;}},{passive:true});
+</script>
+</body></html>
